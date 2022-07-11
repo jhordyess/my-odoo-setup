@@ -1,0 +1,26 @@
+{
+  "name": "work15",
+  "dockerComposeFile": ["../../docker-compose.yml"],
+  "service": "odoo",
+  "shutdownAction": "none",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "remote.autoForwardPorts": false,
+        "python.formatting.provider": "black"
+      },
+      "extensions": [
+        "ms-python.python",
+        // "ms-python.vscode-pylance",
+        "jigar-patel.OdooSnippets",
+        "DotJoshJohnson.xml",
+        "esbenp.prettier-vscode",
+        "mechatroner.rainbow-csv"
+      ]
+    }
+  },
+  "postCreateCommand": "/usr/bin/python3 -m pip install -U black",
+  "workspaceFolder": "/workspaces/work15",
+  "remoteUser": "jhordyess"
+}

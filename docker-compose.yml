@@ -1,0 +1,23 @@
+services:
+  odoo-db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+  odoo:
+    image: jhordyess/odoo:15
+    depends_on:
+      - odoo-db
+    ports:
+      - 80:8069
+    environment:
+      - PG_HOST=odoo-db
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+    volumes:
+      - ./sources/web-data:/var/lib/odoo
+      - ./sources/addons:/mnt/extra-addons
+      - .:/workspaces:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"

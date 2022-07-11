@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "name": "empty",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "console": "internalConsole",
+      "program": "/usr/bin/odoo",
+      "args": [
+        "--db_host=${env:PG_HOST}",
+        "--db_user=${env:POSTGRES_USER}",
+        "--db_password=${env:POSTGRES_PASSWORD}"
+      ]
+    },
+    {
+      "name": "work1",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "console": "internalConsole",
+      "program": "/usr/bin/odoo",
+      "args": [
+        // "--dev=all",
+        "--database=my_odoo",
+        "--without-demo=all",
+        "--init=contacts",
+        // "--update=",
+        "--db_host=${env:PG_HOST}",
+        "--db_user=${env:POSTGRES_USER}",
+        "--db_password=${env:POSTGRES_PASSWORD}",
+        "--addons-path=/usr/lib/python3/dist-packages/odoo/addons,/workspaces/work15/addons" // /mnt/extra-addons
+      ]
+    }
+  ]
+}
