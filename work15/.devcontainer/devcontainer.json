@@ -12,11 +12,11 @@
       },
       "extensions": [
         "ms-python.python",
-        // "ms-python.vscode-pylance",
         "jigar-patel.OdooSnippets",
-        "DotJoshJohnson.xml",
+        "redhat.vscode-xml",
         "esbenp.prettier-vscode",
-        "mechatroner.rainbow-csv"
+        "mechatroner.rainbow-csv",
+        "janisdd.vscode-edit-csv"
       ]
     }
   },
