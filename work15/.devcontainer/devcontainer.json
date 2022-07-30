@@ -8,7 +8,8 @@
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
         "remote.autoForwardPorts": false,
-        "python.formatting.provider": "black"
+        "python.formatting.provider": "black",
+        "redhat.telemetry.enabled": false
       },
       "extensions": [
         "ms-python.python",
